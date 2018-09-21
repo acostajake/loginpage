@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import firebase, { auth } from "./firebase.js";
 
+
+    //Logs in new user with email and password
 class EmailLogin extends Component {
   constructor(props) {
     super(props);
@@ -27,7 +29,6 @@ class EmailLogin extends Component {
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .catch(function(error) {
-        // Handle Errors here.
         console.log(email, password);
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -40,9 +41,6 @@ class EmailLogin extends Component {
         pass: this.state.password
       };
       userLogin.push(newUser);
-      this.setState({
-        user
-      });
   }
 
   componentDidMount() {

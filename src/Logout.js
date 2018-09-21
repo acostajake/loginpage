@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import firebase, { auth } from './firebase.js';
 
+
+    //Logs user out of app
+    //does not affect login status of oAuth provider app
 class Logout extends Component {
     constructor(props) {
         super(props)

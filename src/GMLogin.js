@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase, { auth, gmprovider } from './firebase.js';
 
+    //Logs in user with Google Auth
 class GMLogin extends Component {
     constructor(props) {
         super(props)

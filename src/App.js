@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import "./App.css";
-import firebase, { auth } from "./firebase.js";
+import firebase, { auth } from "./firebase";
 import GMLogin from './GMLogin';
 import FBLogin from './FBLogin';
 import TWLogin from './TWLogin';
 import Logout from './Logout';
-import EmailLogin from './EmailLogin.js';
+import EmailLogin from './EmailLogin';
+import UpdateEmail from './UpdateEmail';
+import Countdown from './Countdown';
 
 class App extends Component {
   constructor(props) {
@@ -76,7 +78,11 @@ class App extends Component {
           <div>
             <h1>Test App -- Logins!</h1>
             {this.state.user ? (
-              <Logout />
+              <div>
+                <Logout />
+                <UpdateEmail />
+                <Countdown />
+              </div>
             ) : (
               <div>
                 <EmailLogin />

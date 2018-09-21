@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase, { twprovider } from './firebase.js';
 
+    //Logs in user with Twitter; does NOT store email - users displayName instead.
 class TWLogin extends Component {
     constructor(props) {
         super(props)
